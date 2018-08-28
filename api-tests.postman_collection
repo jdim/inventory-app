@@ -1,0 +1,110 @@
+{
+	"variables": [],
+	"info": {
+		"name": "inventory app",
+		"_postman_id": "664292ad-3032-3903-a088-e42b868f832a",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CREATE NEW categorie",
+			"request": {
+				"url": "http://localhost:3000/api/categories/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Dairy product\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE NEW product",
+			"request": {
+				"url": "http://localhost:3000/api/products",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Milk\",\n  \"category\": \"5b7dc1fe3411ec00320c0949\",\n  \"shelf_life\": \"2018-08-21T21:00:00.000Z\"\n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "READ product",
+			"request": {
+				"url": "http://localhost:3000/api/products/5b7dc3a4871d450032859f37",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE product",
+			"request": {
+				"url": "http://localhost:3000/api/products/5b7dc3a4871d450032859f37",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Cheese\",\n    \"category\": \"5b7dc1fe3411ec00320c0949\",\n    \"shelf_life\": \"2018-09-01T00:00:00.000Z\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET LIST of products",
+			"request": {
+				"url": "http://localhost:3000/api/products/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE product",
+			"request": {
+				"url": "http://localhost:3000/api/products/5b830ff38be8fc00d7e17ca1",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

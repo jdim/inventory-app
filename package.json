@@ -1,0 +1,29 @@
+{
+  "name": "inventory-app",
+  "version": "1.0.0",
+  "description": "Sample Inventory App",
+  "main": "server.js",
+  "author": "Dmitrii Khabarov",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "mongoose": "^5.2.9",
+    "morgan": "^1.9.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "jest": "^23.4.2",
+    "jest-environment-node": "^23.4.0",
+    "mongodb-memory-server": "^2.0.1",
+    "nodemon": "^1.18.3",
+    "supertest": "^3.1.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "verbose": true
+  }
+}
